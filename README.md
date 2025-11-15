@@ -44,21 +44,29 @@ The app automatically runs 30 parameter combinations in the background to find t
 
 Step-by-Step Visualization: Watch the DBSCAN algorithm build clusters one point at a time.
 
-Real-World Analogies: Understand parameters through relatable examples:
-
-Civil: Finding Pothole Hotspots
-
-Bio-Chem: Identifying Molecule Families
-
-Sports: Locating Player Shot Chart Hotspots
+Interactive Radius-on-Hover: Hover on any point to see its neighbors based on the current epsilon setting.
 
 Live Parameter Tuning: Use sliders to adjust epsilon (Search Radius) and MinPts (Min Crowd Size) and immediately see the effect.
 
-Interactive Radius-on-Hover: Hover on any point to see its neighbors based on the current epsilon setting.
+DBSCAN vs. K-Means Showdown: A special "Concentric Circles" dataset demonstrates exactly why density-based clustering (DBSCAN) is superior to centroid-based clustering (K-Means) for complex, non-spherical shapes.
 
-"Happiness Score" (Silhouette Score): Get a simple metric to understand how "good" the current clustering is.
+Four Unique Datasets: Explore different clustering challenges:
 
-Automatic Best Parameter Search: See the results for the optimal parameters, calculated automatically.
+Civil: Finding "blob-like" Pothole Hotspots.
+
+Retail: Identifying "ring-shaped" Customer Store Zones.
+
+Sports: Locating sparse Shot Chart Hotspots.
+
+Astro: Sifting "noise-heavy" Deep Space Signals.
+
+Advanced Dataset-Aware Scoring: The "Best Parameter" search is powered by a smart scoring system that changes based on the data's expected shape:
+
+retailDensityScore: A custom score that rewards finding two distinct rings.
+
+astroScore: A special score that rewards finding zero clusters, (the correct answer for the noise dataset).
+
+Silhouette Score & DBCV: Used as intelligent fallbacks for blob-like data.
 
 2x2 Comparison Grid: A powerful teaching tool that shows the results for four common parameter scenarios (e.g., "High Radius, Low Crowd" vs. "Low Radius, High Crowd").
 
